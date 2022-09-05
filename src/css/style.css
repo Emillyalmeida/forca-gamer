@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+* {
+  transition: 0.75s;
+}
+
+.light-theme {
+  --background-color: #f3f5fc;
+  --color: #0a3871;
+  --button-encrypt-background: #0a3871;
+  --button-decrypt-background: #d8dfe8;
+  --text: #495057;
+  --section-encrypt: #fff;
+}
+
+.dark-theme {
+  --background-color: #0a3871;
+  --color: #f3f5fc;
+  --button-decrypt-background: #0a3871;
+  --button-encrypt-background: #d8dfe8;
+  --text: #fff;
+  --section-encrypt: #021733;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--background-color);
+  color: var(--color);
+  box-sizing: border-box;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  padding: 20px 5%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-style: italic;
+}
+
+header button {
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background-color: var(--background-color);
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--color);
+}
+
+header button:hover {
+  border: 1px solid var(--color);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+  padding: 10px 25px;
+  margin-top: 30px;
+  font-weight: 600;
+  width: 100%;
+}
+
+footer div {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  font-size: 1.75rem;
+}
+
+footer div a {
+  color: var(--color);
+}
