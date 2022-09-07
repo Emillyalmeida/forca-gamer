@@ -1,19 +1,27 @@
+import Controller from "../controller/controller.js";
+const player = JSON.parse(localStorage.getItem("@forcaGame"));
+
 const btnColorMode = document.querySelector("header button");
+const btnClose = document.getElementById("close-info");
 
-const changeTheme = () => {
-  const themeBody = document.body.classList;
+const form = document.querySelector("form");
 
-  if (themeBody[0] === "light-theme") {
-    themeBody.remove("light-theme");
-    themeBody.add("dark-theme");
+if (player) {
+  window.location = "./src/pages/start.html";
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (e.target[0].value) {
+    Controller.player(e.target[0].value, 0, 0);
   } else {
-    themeBody.add("light-theme");
-    themeBody.remove("dark-theme");
+    Controller.nameEmpty();
   }
-  btnColorMode.innerHTML = "";
-  themeBody[0] === "light-theme"
-    ? (btnColorMode.innerHTML = '<i class="fa-solid fa-moon"></i>')
-    : (btnColorMode.innerHTML = '<i class="fa-solid fa-sun"></i>');
-};
+});
 
-btnColorMode.addEventListener("click", changeTheme);
+btnClose.addEventListener("click", () => {
+  document.getElementById("info").classList.add("notAppear");
+  document.getElementById("info").classList.remove("modal-info");
+});
+
+btnColorMode.addEventListener("click", Controller.changeTheme);
