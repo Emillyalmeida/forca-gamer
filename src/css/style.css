@@ -11,7 +11,6 @@
   --button-encrypt-background: #0a3871;
   --button-decrypt-background: #d8dfe8;
   --text: #495057;
-  --section-encrypt: #fff;
 }
 
 .dark-theme {
@@ -20,7 +19,6 @@
   --button-decrypt-background: #0a3871;
   --button-encrypt-background: #d8dfe8;
   --text: #fff;
-  --section-encrypt: #021733;
 }
 
 body {
@@ -65,6 +63,7 @@ main {
   width: 100%;
   gap: 30px;
 }
+/* inital */
 
 .infoPlayer {
   display: flex;
@@ -92,39 +91,69 @@ main h2 {
   height: 35px;
   cursor: pointer;
   border-radius: 15px;
-  background-color: var(--button-encrypt-background);
+  background-color: var(--color);
   color: var(--background-color);
   font-size: 1.1rem;
   border: none;
   width: 140px;
 }
 
-.div-buttons {
+/* register new word */
+
+.section-register-new-word {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  gap: 15px;
+  padding-top: 20px;
+  width: 90%;
 }
 
-.div-buttons button {
-  cursor: pointer;
-  border-radius: 22px;
-  background-color: var(--button-encrypt-background);
-  color: var(--background-color);
-  font-size: 1.1rem;
-  border: none;
-  width: 240px;
-  height: 80px;
+.section-register-new-word .area-text {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  gap: 10px;
 }
 
-.div-buttons button:hover {
-  opacity: 0.75;
-}
-
-.div-buttons button + button {
+.section-register-new-word .area-text textarea {
+  border: 1px solid transparent;
+  border-radius: 10px;
   background-color: var(--background-color);
+  width: 95%;
+  min-height: 45vh;
+  font-size: 1.75rem;
   color: var(--color);
+}
+
+.section-register-new-word .area-text textarea::placeholder {
+  color: var(--color);
+  font-size: 1.25rem;
+  padding: 10px;
+}
+
+.section-register-new-word .area-text textarea:focus-visible {
   border: 1px solid var(--color);
 }
+
+.section-register-new-word .area-text span {
+  font-size: 0.75rem;
+  color: var(--text);
+}
+
+.section-register-new-word .buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  padding: 15px 10px;
+}
+
+/* .section-register-new-word .buttons button {
+
+} */
 
 footer {
   display: flex;
