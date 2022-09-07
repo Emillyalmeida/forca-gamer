@@ -50,3 +50,5 @@ const words = [
   "toalha",
   "peixe",
 ];
+
+export default words;

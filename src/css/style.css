@@ -59,11 +59,10 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 73vh;
+  min-height: 71vh;
   width: 100%;
   gap: 30px;
 }
-/* inital */
 
 .infoPlayer {
   display: flex;
@@ -97,63 +96,6 @@ main h2 {
   border: none;
   width: 140px;
 }
-
-/* register new word */
-
-.section-register-new-word {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  padding-top: 20px;
-  width: 90%;
-}
-
-.section-register-new-word .area-text {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  width: 100%;
-  gap: 10px;
-}
-
-.section-register-new-word .area-text textarea {
-  border: 1px solid transparent;
-  border-radius: 10px;
-  background-color: var(--background-color);
-  width: 95%;
-  min-height: 45vh;
-  font-size: 1.75rem;
-  color: var(--color);
-}
-
-.section-register-new-word .area-text textarea::placeholder {
-  color: var(--color);
-  font-size: 1.25rem;
-  padding: 10px;
-}
-
-.section-register-new-word .area-text textarea:focus-visible {
-  border: 1px solid var(--color);
-}
-
-.section-register-new-word .area-text span {
-  font-size: 0.75rem;
-  color: var(--text);
-}
-
-.section-register-new-word .buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  width: 100%;
-  padding: 15px 10px;
-}
-
-/* .section-register-new-word .buttons button {
-
-} */
 
 footer {
   display: flex;
@@ -206,7 +148,7 @@ footer div a {
   justify-content: space-around;
   padding: 10px;
   height: 120px;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .modal-info button {

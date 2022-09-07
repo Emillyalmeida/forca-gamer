@@ -1,17 +1,15 @@
 const main = document.querySelector("main");
 const btnColorMode = document.querySelector("header button");
+const modal = document.getElementById("info");
 
 export default class Template {
-  static Buttons(name) {
-    main.innerHTML = `<h2>Jogador: ${name}</h2>
-                      <div class="div-buttons">
-                        <button id="start">Começar a jogar</button>
-                        <button id="newWord">Adicionar nova palavra</button>
-                      </div>`;
-  }
   static ModalInfo() {
-    document.getElementById("info").classList.add("modal-info");
-    document.getElementById("info").classList.remove("notAppear");
+    modal.classList.add("modal-info");
+    modal.classList.remove("notAppear");
+  }
+  static closeModal() {
+    modal.classList.add("notAppear");
+    modal.classList.remove("modal-info");
   }
   static changeTheme() {
     const themeBody = document.body.classList;

@@ -20,8 +20,7 @@ form.addEventListener("submit", (e) => {
 });
 
 btnClose.addEventListener("click", () => {
-  document.getElementById("info").classList.add("notAppear");
-  document.getElementById("info").classList.remove("modal-info");
+  Controller.closeModal();
 });
 
 btnColorMode.addEventListener("click", Controller.changeTheme);
