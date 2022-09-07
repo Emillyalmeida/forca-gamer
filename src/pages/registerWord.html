@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/registerWord.css" />
+    <script
+      src="https://kit.fontawesome.com/5fe92a0230.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body class="light-theme">
     <header>
@@ -15,24 +19,30 @@
       <button><i class="fa-solid fa-moon"></i></button>
     </header>
     <main>
-      <section class="section-area-to-encrypt">
+      <section class="section-register-new-word">
         <div class="area-text">
           <textarea
-            name="decodificar"
-            id="area-Decoder"
+            name="nova palavra"
+            id="area-new-word"
             cols="30"
             rows="10"
-            placeholder="Digite uma frase"
+            placeholder="Digite uma palavra"
           ></textarea>
           <span
             ><i class="fa-solid fa-circle-info"></i> Minimo 4 caracteres.</span
           >
         </div>
         <div class="buttons">
-          <button id="start">Salvar e começar</button>
+          <button id="save">Salvar e começar</button>
           <button id="back">Voltar</button>
         </div>
       </section>
+      <div id="info" class="notAppear">
+        <div>
+          <h3>Minimo 4 caracteres</h3>
+          <button id="close-info">Ok</button>
+        </div>
+      </div>
     </main>
     <footer>
       <h3>Created by Emilly Almeida</h3>
@@ -53,6 +63,6 @@
         </a>
       </div>
     </footer>
-    <script type="module" src="./src/js/script.js"></script>
+    <script type="module" src="../js/registerWord.js"></script>
   </body>
 </html>
