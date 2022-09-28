@@ -18,7 +18,7 @@ export default class Controller {
     Template.ModalInfo();
   }
   static startGame() {
-    console.log("start");
+    window.location = "./game.html";
   }
 
   static newWord() {
@@ -36,5 +36,11 @@ export default class Controller {
 
   static closeModal() {
     Template.closeModal();
+  }
+
+  static sortWord() {
+    const pos = Math.floor(Math.random() * words.length);
+    console.log(pos);
+    return words[pos];
   }
 }
