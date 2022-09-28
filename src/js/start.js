@@ -14,12 +14,8 @@ const btnNewWord = document.getElementById("newWord");
 
 const btnColorMode = document.querySelector("header button");
 
-btnStart.addEventListener("click", () => {
-  Controller.startGame();
-});
+btnStart.addEventListener("click", Controller.startGame);
 
-btnNewWord.addEventListener("click", () => {
-  Controller.newWord();
-});
+btnNewWord.addEventListener("click", Controller.newWord);
 
 btnColorMode.addEventListener("click", Controller.changeTheme);

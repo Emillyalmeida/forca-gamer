@@ -14,8 +14,6 @@ save.addEventListener("click", () => {
   Controller.registerWord(texrArea.value);
 });
 
-btnClose.addEventListener("click", () => {
-  Controller.closeModal();
-});
+btnClose.addEventListener("click", Controller.closeModal);
 
 btnColorMode.addEventListener("click", Controller.changeTheme);
