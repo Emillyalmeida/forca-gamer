@@ -4,11 +4,77 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/game.css" />
     <script
       src="https://kit.fontawesome.com/5fe92a0230.js"
       crossorigin="anonymous"
     ></script>
-    <title>Document</title>
+    <title>Jogar</title>
   </head>
-  <body></body>
+  <body class="light-theme">
+    <header>
+      <h1>E</h1>
+      <button><i class="fa-solid fa-moon"></i></button>
+    </header>
+    <main>
+      <div class="container-game">
+        <canvas id="forca"></canvas>
+        <div id="lines-word"></div>
+        <div id="letters-incorrects"></div>
+        <div id="keyboard" class="keyboard">
+          <button id="q">q</button>
+          <button id="w">w</button>
+          <button id="e">e</button>
+          <button id="r">r</button>
+          <button id="t">t</button>
+          <button id="y">y</button>
+          <button id="u">u</button>
+          <button id="i">i</button>
+          <button id="o">o</button>
+          <button id="p">p</button>
+          <button id="a">a</button>
+          <button id="s">s</button>
+          <button id="d">d</button>
+          <button id="f">f</button>
+          <button id="g">g</button>
+          <button id="h">h</button>
+          <button id="j">j</button>
+          <button id="k">k</button>
+          <button id="l">l</button>
+          <button id="z">z</button>
+          <button id="x">x</button>
+          <button id="c">c</button>
+          <button id="v">v</button>
+          <button id="b">b</button>
+          <button id="n">n</button>
+          <button id="m">m</button>
+        </div>
+        <div class="div-btn-game">
+          <button id="quit" class="quit">Desistir</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h3>Created by Emilly Almeida</h3>
+      <div>
+        <a
+          href="https://www.linkedin.com/in/emilly-almeida-front-end/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a
+          href="https://github.com/Emillyalmeida"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+    </footer>
+    <script type="module" src="../js/game.js"></script>
+  </body>
 </html>
