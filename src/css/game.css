@@ -8,16 +8,17 @@
 }
 
 canvas {
-  height: 325px;
-  width: 250px;
+  height: 350px;
+  width: 300px;
   color: var(--color);
+  stroke: var(--color);
 }
 
 #lines-word {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-  padding: 0 20px;
+  padding: 20px;
   align-items: center;
   justify-content: center;
 }
@@ -26,6 +27,17 @@ canvas {
   width: 40px;
   height: 45px;
   border-bottom: 5px solid var(--color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#lines-word div span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #83bbff;
 }
 
 #letters-incorrects {
@@ -59,6 +71,22 @@ canvas {
   font-weight: 700;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+.div-btn-game button {
+  background-color: var(--background-color);
+  color: var(--color);
+  border: 2px solid var(--color);
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.div-btn-game button:hover {
+  opacity: 0.75;
 }
 
 @media screen and (min-width: 426px) {
