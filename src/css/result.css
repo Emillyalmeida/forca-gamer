@@ -1,0 +1,9 @@
+.winner-img {
+    width: 80%;
+    max-width: 700px;
+}
+
+.loser-img {
+    width: 75%;
+    max-width: 500px;
+}
