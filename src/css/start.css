@@ -1,3 +1,30 @@
+.content-info {
+  display: flex;
+  gap:30px;
+  padding-bottom: 15px;
+}
+
+.info-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.info-player i {
+  font-size: 2rem;
+}
+
+.info-player h4 {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.info-player span {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
 .div-buttons {
   display: flex;
   flex-direction: column;
