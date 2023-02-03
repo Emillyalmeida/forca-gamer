@@ -1,4 +1,7 @@
 import Controller from "../controller/controller.js";
+
+Controller.checkPlayer();
+
 const word = Controller.sortWord();
 
 const btnColorMode = document.querySelector("header button");
@@ -8,6 +11,9 @@ const divLines = document.getElementById("lines-word");
 const keyboard = document.getElementById("keyboard");
 const divLetterAttempts = document.getElementById("letters-incorrects");
 const btnQuit = document.getElementById("quit");
+const btnConfirmQuit = document.querySelector(".btn-quit");
+const btnClose = document.getElementById("close-info");
+
 
 let listLettersAttempts = [];
 let sizeWord = word.length;
@@ -73,7 +79,7 @@ function desenharForca() {
     tablero.lineTo(260, 130);
   }
   if (errors === 7) {
-    //para mão izquerda
+    //para mão esquerda
     tablero.moveTo(240, 80);
     tablero.lineTo(220, 92);
   }
@@ -116,9 +122,10 @@ const getLetter = (letter) => {
     });
     acertos += positionsAcertos.length;
     listLettersAttempts.push(letter);
+    showIncorrectLetter();
 
     if (acertos === sizeWord) {
-      console.log("vencedor");
+      Controller.win();
     }
   } else {
     listLettersAttempts.push(letter);
@@ -126,21 +133,29 @@ const getLetter = (letter) => {
     errors++;
     desenharForca();
     if (errors === 8) {
-      console.log("perdeu");
+      Controller.lose();
     }
   }
 };
 
 for (let i = 0; i < keyboard.children.length; i++) {
-  let item = keyboard.children[i].addEventListener("click", (e) => {
+  keyboard.children[i].addEventListener("click", (e) => {
     getLetter(e.target.id);
   });
 }
 
 btnQuit.addEventListener("click", () => {
-  window.location = "./start.html";
+  Controller.modalWarn();
 });
 
 btnColorMode.addEventListener("click", () => {
   Controller.changeTheme();
+});
+
+btnConfirmQuit.addEventListener("click", () => {
+  Controller.quit();
+})
+
+btnClose.addEventListener("click", () => {
+  Controller.closeModal();
 });
