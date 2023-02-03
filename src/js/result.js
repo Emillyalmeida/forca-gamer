@@ -1,6 +1,7 @@
 import Controller from "../controller/controller.js";
 
 Controller.checkPlayer()
+Controller.checkTheme()
 
 const btnStart = document.getElementById("start");
 const btnBack = document.getElementById("back");

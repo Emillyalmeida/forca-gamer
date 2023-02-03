@@ -18,9 +18,11 @@ export default class Template {
     const themeBody = document.body.classList;
 
     if (themeBody[0] === "light-theme") {
+      localStorage.setItem("@forcaGame/dark", JSON.stringify(true));
       themeBody.remove("light-theme");
-      themeBody.add("dark-theme");
+      themeBody.add("dark-theme");     
     } else {
+      localStorage.setItem("@forcaGame/dark", JSON.stringify(false));
       themeBody.add("light-theme");
       themeBody.remove("dark-theme");
     }

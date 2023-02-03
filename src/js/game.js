@@ -2,6 +2,8 @@ import Controller from "../controller/controller.js";
 
 Controller.checkPlayer();
 
+Controller.checkTheme();
+
 Controller.sortWord();
 
 const btnColorMode = document.querySelector("header button");

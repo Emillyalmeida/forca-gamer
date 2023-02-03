@@ -1,5 +1,7 @@
 import Controller from "../controller/controller.js";
 
+Controller.checkTheme()
+
 const btnColorMode = document.querySelector("header button");
 const btnClose = document.getElementById("close-info");
 

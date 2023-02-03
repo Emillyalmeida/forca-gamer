@@ -1,9 +1,10 @@
 import Controller from "../controller/controller.js";
 
-Controller.checkPlayer()
+Controller.checkPlayer();
+Controller.checkTheme();
 
 const main = document.querySelector("main");
-const player = Controller.getPlayer()
+const player = Controller.getPlayer();
 
 main.innerHTML = `    <h2>Jogador: ${player._nome}</h2>
                       <div class="content-info">

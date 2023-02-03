@@ -3,8 +3,7 @@ import Template from "../view/template.js";
 import words from "../js/word.js";
 
 let existPlayer = JSON.parse(localStorage.getItem("@forcaGame"));
-
-// export let player = existPlayer? new User(existPlayer._nome, existPlayer._vitorias, existPlayer._derrotas): null;
+let themeDark = JSON.parse(localStorage.getItem("@forcaGame/dark"));
 
 export default class Controller {
   static word = ''
@@ -17,6 +16,12 @@ export default class Controller {
 
   static changeTheme() {
     Template.changeTheme();
+  }
+
+  static checkTheme() {
+    if(themeDark){
+      Template.changeTheme();
+    }
   }
 
   static setPlayer(name, vitorias, derrotas) {
