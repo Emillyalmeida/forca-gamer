@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 * {
-  transition: 0.75s;
+  transition: 0.3s;
   box-sizing: border-box;
 }
 
@@ -76,6 +76,13 @@ main h2 {
   font-weight: 700;
 }
 
+.infoPlayer h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+  color: var(--color);
+}
+
 .infoPlayer input {
   border: 1px solid var(--color);
   border-radius: 10px;
@@ -84,6 +91,10 @@ main h2 {
   height: 45px;
   font-size: 1.25rem;
   color: var(--color);
+}
+
+.infoPlayer input::placeholder {
+  padding-left: 5px;
 }
 
 .infoPlayer button {
@@ -120,6 +131,12 @@ footer div a {
   color: var(--color);
 }
 
+footer div a:hover {
+  font-size: 1.9rem;
+  transform: translate(0,-3px);
+  opacity: 0.8;
+}
+
 .notAppear {
   display: none;
 }
@@ -138,7 +155,9 @@ footer div a {
 }
 
 .modal-info > div {
-  width: 300px;
+  width: 80%;
+  min-width: 300px;
+  max-width: 600px;
   border-radius: 7px;
   background-color: var(--background-color);
   color: var(--color);
@@ -146,9 +165,9 @@ footer div a {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 10px;
+  padding: 15px;
   height: 120px;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 .modal-info button {

@@ -54,3 +54,37 @@
   width: 200px;
   height: 50px;
 }
+
+@media screen and (min-width: 768px) {
+  main h2{
+    font-size: 2rem;
+  }
+
+  .info-player i {
+    font-size: 2.5rem;
+  }
+  
+  .info-player h4 {
+    font-size: 1rem;
+  }
+  
+  .info-player span {
+    font-size: 1.75rem;
+  }
+
+  .div-buttons button {
+    font-size: 1.25rem;
+  }
+
+  .div-buttons button + button {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .keyboard button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
