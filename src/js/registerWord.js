@@ -7,7 +7,7 @@ const btnClose = document.getElementById("close-info");
 const btnColorMode = document.querySelector("header button");
 
 btnBack.addEventListener("click", () => {
-  window.location = "./start.html";
+  Controller.back()
 });
 
 save.addEventListener("click", () => {

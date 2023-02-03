@@ -3,7 +3,7 @@ import Controller from "../controller/controller.js";
 Controller.checkPlayer()
 
 const main = document.querySelector("main");
-const player = JSON.parse(localStorage.getItem("@forcaGame"));
+const player = Controller.getPlayer()
 
 main.innerHTML = `    <h2>Jogador: ${player._nome}</h2>
                       <div class="content-info">
@@ -25,7 +25,6 @@ main.innerHTML = `    <h2>Jogador: ${player._nome}</h2>
 
 const btnStart = document.getElementById("start");
 const btnNewWord = document.getElementById("newWord");
-
 const btnColorMode = document.querySelector("header button");
 
 btnStart.addEventListener("click", Controller.startGame);

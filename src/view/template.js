@@ -1,6 +1,7 @@
 const main = document.querySelector("main");
 const btnColorMode = document.querySelector("header button");
 const modal = document.getElementById("info");
+const divLines = document.getElementById("lines-word");
 
 export default class Template {
   static ModalInfo() {
@@ -25,5 +26,15 @@ export default class Template {
     themeBody[0] === "light-theme"
       ? (btnColorMode.innerHTML = '<i class="fa-solid fa-moon"></i>')
       : (btnColorMode.innerHTML = '<i class="fa-solid fa-sun"></i>');
+  }
+
+  static linesLetters (word) {
+    word.split("").forEach((letter, i) => {
+      const divLetter = document.createElement("div");
+      divLetter.id = i;
+      divLetter.classList.add("line-letter");
+    
+      divLines.appendChild(divLetter);
+    });
   }
 }

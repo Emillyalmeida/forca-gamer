@@ -5,15 +5,12 @@ Controller.checkPlayer();
 const word = Controller.sortWord();
 
 const btnColorMode = document.querySelector("header button");
-const tela = document.querySelector("canvas");
 const tablero = document.getElementById("forca").getContext("2d");
-const divLines = document.getElementById("lines-word");
 const keyboard = document.getElementById("keyboard");
 const divLetterAttempts = document.getElementById("letters-incorrects");
 const btnQuit = document.getElementById("quit");
 const btnConfirmQuit = document.querySelector(".btn-quit");
 const btnClose = document.getElementById("close-info");
-
 
 let listLettersAttempts = [];
 let sizeWord = word.length;
@@ -21,14 +18,6 @@ let acertos = 0;
 let errors = 0;
 
 console.log(word.split(""));
-
-word.split("").forEach((letter, i) => {
-  const divLetter = document.createElement("div");
-  divLetter.id = i;
-  divLetter.classList.add("line-letter");
-
-  divLines.appendChild(divLetter);
-});
 
 const drawHang = () => {
   tablero.lineWidth = 6;
