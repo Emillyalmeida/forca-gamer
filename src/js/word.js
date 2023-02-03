@@ -49,6 +49,9 @@ const words = [
   "internet",
   "toalha",
   "peixe",
+  "problema",
+  "vida",
+  "mochila"
 ];
 
 export default words;
