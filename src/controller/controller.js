@@ -4,22 +4,29 @@ import words from "../js/word.js";
 
 let existPlayer = JSON.parse(localStorage.getItem("@forcaGame"));
 
-export let player = existPlayer? new User(existPlayer._nome, existPlayer._vitorias, existPlayer._derrotas): null;
+// export let player = existPlayer? new User(existPlayer._nome, existPlayer._vitorias, existPlayer._derrotas): null;
 
 export default class Controller {
+  static word = ''
+  static listLettersAttempts = [];
+  static sizeWord = 0;
+  static acertos = 0;
+  static errors = 0;
+  static player = existPlayer? new User(existPlayer._nome, existPlayer._vitorias, existPlayer._derrotas): null;
+
+
   static changeTheme() {
     Template.changeTheme();
   }
 
-  static player(name, vitorias, derrotas) {
-    player = new User(name, vitorias, derrotas);
-    localStorage.setItem("@forcaGame", JSON.stringify(player));
+  static setPlayer(name, vitorias, derrotas) {
+    this.player = new User(name, vitorias, derrotas);
+    localStorage.setItem("@forcaGame", JSON.stringify(this.player));
     return window.location = "./src/pages/start.html";
   }
 
   static checkPlayer() {
-    console.log(player)
-    if(!player){
+    if(!this.player){
       return window.location = "../../index.html";
     }
   }
@@ -54,30 +61,66 @@ export default class Controller {
 
   static sortWord() {
     const pos = Math.floor(Math.random() * words.length);
-    console.log(pos);
-    Template.linesLetters(words[pos])
+    this.word = words[pos];
+    Template.drawHang();
+    Template.linesLetters(words[pos]);
     return words[pos];
   }
 
+  static getLetter = (letter) => {
+    this.sizeWord = this.word.length
+    if (this.listLettersAttempts.includes(letter)) {
+      return;
+    }
+    const hasLetter = this.word.includes(letter);
+  
+    if (hasLetter) {
+      const positionsAcertos = this.word.split("").filter((char, i) => {
+        if (char == letter) {
+          Template.showCorrectLetter(i, this.word);
+          return char;
+        }
+      });
+
+      this.acertos += positionsAcertos.length;
+      this.listLettersAttempts.push(letter);
+      Template.showAttemptsLetter(this.listLettersAttempts);
+      
+      if (this.acertos === this.sizeWord) {
+        Controller.win();
+      }
+
+    } else {
+      this.listLettersAttempts.push(letter);
+      Template.showAttemptsLetter(this.listLettersAttempts);
+      this.errors++;
+      Template.draw(this.errors);
+
+      if (this.errors === 8) {
+        Controller.lose();
+      }
+    }
+  };
+
   static win() {
-    player.win()
-    localStorage.setItem("@forcaGame", JSON.stringify(player));
+    this.player.win()
+    localStorage.setItem("@forcaGame", JSON.stringify(this.player));
     window.location = "./win.html";
   }
 
   static lose() {
-    player.lose()
-    localStorage.setItem("@forcaGame", JSON.stringify(player));
+    this.player.lose();
+    localStorage.setItem("@forcaGame", JSON.stringify(this.player));
     window.location = "./lose.html";
   }
 
   static getPlayer() {
-    return player
+    return this.player;
   }
 
   static quit() {
-    this.lose()
-    Template.closeModal()
-    this.back()
+    this.lose();
+    Template.closeModal();
+    this.back();
   }
 }
