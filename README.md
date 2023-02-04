@@ -16,12 +16,12 @@ O forca game foi um projeto proposto pela ONE com a Alura. Que consiste no class
 
 <h2>Acessar Jogo <h2/>
     
-<a href="https://emillyalmeida.github.io/forca-gamer/" target="_blank"> Clique aqui para joga!!r</a>
+ <a href="https://emillyalmeida.github.io/forca-gamer/" target="_blank"> Clique aqui para jogar!!</a>
 
 <h2>Autora</h2>
 
 <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/86078020?s=400&u=6a810d4caaf453156bd3b5bf49dc5378b3fb2bcb&v=4" width="100px;" alt="perfil github"/>
-<br />
 <span><b>Emilly Almeida</b>🚀</span>
+<br/>
 <span>Feito com ❤️ por Emilly de Almeida 👋🏽 Entre em contato!</span>
 
