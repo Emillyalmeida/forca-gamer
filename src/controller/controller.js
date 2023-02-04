@@ -9,7 +9,7 @@ export default class Controller {
   static word = ''
   static listLettersAttempts = [];
   static sizeWord = 0;
-  static acertos = 0;
+  static corrects = 0;
   static errors = 0;
   static player = existPlayer? new User(existPlayer._nome, existPlayer._vitorias, existPlayer._derrotas): null;
 
@@ -87,11 +87,11 @@ export default class Controller {
         }
       });
 
-      this.acertos += positionsAcertos.length;
+      this.corrects += positionsAcertos.length;
       this.listLettersAttempts.push(letter);
       Template.showAttemptsLetter(this.listLettersAttempts);
       
-      if (this.acertos === this.sizeWord) {
+      if (this.corrects === this.sizeWord) {
         Controller.win();
       }
 
