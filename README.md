@@ -24,5 +24,6 @@ O forca game foi um projeto proposto pela ONE com a Alura. Que consiste no class
 <span><b>Emilly Almeida</b>🚀</span>
 <br/>
 <span>Feito com ❤️ por Emilly de Almeida </span>
+<br/>
 <span>👋🏽 Entre em contato!</span>
 
