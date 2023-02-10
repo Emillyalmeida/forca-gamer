@@ -1,5 +1,9 @@
 <h1 align="center"> Forca Game </h1>
 
+<div align="center">
+    <img align="center" alt="gif forca game" src="./src/imgs/forca-game.gif" />
+</div>
+
 <p>
 O forca game foi um projeto proposto pela ONE com a Alura. Que consiste no classico joguinho da forca, onde o jogador tem como objetivo descobrir a qual é a palavra. Após inserir seu nome o jogador poderá iniciar a partida e jogar, também poderá ver o numero de suas vitorias e as derrotas. Também a uma feature de darkMode onde é posssivel mudar de tema escuro e claro.
 </p>
